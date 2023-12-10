@@ -31,7 +31,7 @@ time.sleep(5)
 driver.find_element(By.XPATH,'//*[@id="root"]/div/div/div/div/div[1]/div[2]/button').click() #mute button
 level = 0
 while level < 5:
-    
+
     level += 1
     grid = driver.find_element(By.CLASS_NAME, "grid")
     enemy = grid.find_elements(By.CLASS_NAME, "enemy")   
