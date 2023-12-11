@@ -10,20 +10,20 @@ driver.get(url)
 driver.maximize_window()
 
 #clicks login button
-login = driver.find_element("xpath", "//a[@href]")
+login = driver.find_element("xpath","//a[@href]")
 login.click()
 
 #login info
-username = driver.find_element(By.NAME, "username")
+username = driver.find_element(By.NAME,"username")
 username.send_keys("GetBotThor")
 password = driver.find_element(By.NAME,"password")
 password.send_keys("GetBotThor123")
-submit = driver.find_element(By.XPATH, "//button[@type]")
+submit = driver.find_element(By.XPATH,"//button[@type]")
 submit.click()
 
 #clicks play game
 time.sleep(2)
-play_game = driver.find_element(By.XPATH, "/html/body/div/div/div/div[1]/a[1]")
+play_game = driver.find_element(By.XPATH,"/html/body/div/div/div/div[1]/a[1]")
 play_game.click()
 
 #game
@@ -33,8 +33,8 @@ level = 0
 while level < 5:
 
     level += 1
-    grid = driver.find_element(By.CLASS_NAME, "grid")
-    enemy = grid.find_elements(By.CLASS_NAME, "enemy")   
+    grid = driver.find_element(By.CLASS_NAME,"grid")
+    enemy = grid.find_elements(By.CLASS_NAME,"enemy")   
     reload = driver.find_element(By.XPATH,'//*[@id="root"]/div/div/div/div/div[1]/div[2]/button')
     
     for spot in enemy:
